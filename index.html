@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fundamentals Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>CSS Fundamentals & Box Model Demo</h1>
+            <p>Exploring typography, backgrounds, layouts, and the CSS Box Model</p>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="main-content">
+            <!-- Article Section -->
+            <article class="article">
+                <h2>Understanding the CSS Box Model</h2>
+                <p>The CSS Box Model is fundamental to understanding how elements are sized and spaced on a web page. Every HTML element is essentially a rectangular box, and the box model describes how the different parts of this box work together.</p>
+                
+                <p>The box model consists of four main components: <strong>content</strong>, <strong>padding</strong>, <strong>border</strong>, and <strong>margin</strong>. The content area contains the actual content of the element, such as text or images.</p>
+                
+                <div class="highlight">
+                    Box Model Formula: Total Width = content + padding + border + margin
+                </div>
+                
+                <p>Padding creates space between the content and the border, while the border wraps around the padding and content. Finally, the margin creates space between the element and other elements around it.</p>
+                
+                <p>Understanding how these components work together is crucial for creating well-spaced, visually appealing layouts. The <code>box-sizing</code> property can change how the total width and height are calculated.</p>
+            </article>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-item">
+                    <h3>CSS Properties Used</h3>
+                    <ul>
+                        <li>Background & Colors</li>
+                        <li>Typography & Fonts</li>
+                        <li>Padding & Margins</li>
+                        <li>Borders & Shadows</li>
+                        <li>Grid & Flexbox</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-item">
+                    <h3>Layout Techniques</h3>
+                    <ul>
+                        <li>CSS Grid Layout</li>
+                        <li>Flexbox Alignment</li>
+                        <li>Responsive Breakpoints</li>
+                        <li>Box Model Control</li>
+                        <li>Visual Hierarchy</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Box Model Demonstration -->
+        <section class="box-model-demo">
+            <div class="box-model-header">
+                <h2>Box Model Visual Examples</h2>
+                <p>See how different box model properties affect element sizing</p>
+            </div>
+            
+            <div class="box-examples">
+                <div class="box-example">
+                    <h4>Standard Box</h4>
+                    <div class="demo-box">Content</div>
+                    <p>Basic padding, margin, and border</p>
+                </div>
+                
+                <div class="box-example">
+                    <h4>Large Margin</h4>
+                    <div class="demo-box large-margin">Content</div>
+                    <p>Increased margin spacing</p>
+                </div>
+                
+                <div class="box-example">
+                    <h4>Large Padding</h4>
+                    <div class="demo-box large-padding">Content</div>
+                    <p>Increased internal padding</p>
+                </div>
+                
+                <div class="box-example">
+                    <h4>Thick Border</h4>
+                    <div class="demo-box thick-border">Content</div>
+                    <p>Increased border width</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 CSS Fundamentals Demo - Showcasing Typography, Backgrounds, Layout & Box Model</p>
+        </footer>
+    </div>
+</body>
+</html>

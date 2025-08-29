@@ -1,0 +1,244 @@
+ Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Container with box model demonstration */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /* Box model: content + padding + border + margin */
+}
+
+/* Header styling */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    /* Box model demonstration */
+    border: 3px solid #4a90e2;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Main content grid */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Article section */
+.article {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+    /* Box model: padding creates inner spacing */
+    border-left: 5px solid #e74c3c;
+}
+
+.article h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.article p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 1rem;
+}
+
+.article .highlight {
+    background: #fff3cd;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    /* Box model demonstration with different padding/margins */
+    margin: 5px 0;
+}
+
+.sidebar-item h3 {
+    font-size: 1.3rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar-item ul {
+    list-style: none;
+}
+
+.sidebar-item li {
+    padding: 8px 0;
+    border-bottom: 1px dotted #bdc3c7;
+    transition: color 0.3s ease;
+}
+
+.sidebar-item li:hover {
+    color: #3498db;
+    cursor: pointer;
+}
+
+/* Box model demonstration section */
+.box-model-demo {
+    background: white;
+    margin: 30px 0;
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+}
+
+.box-model-header {
+    background: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.box-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.box-example {
+    text-align: center;
+    border: 2px dashed #95a5a6;
+    padding: 20px;
+    position: relative;
+}
+
+.box-example h4 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.demo-box {
+    background: #e8f4fd;
+    border: 4px solid #3498db;
+    padding: 20px;
+    margin: 15px auto;
+    width: 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.demo-box.large-margin {
+    margin: 30px auto;
+}
+
+.demo-box.large-padding {
+    padding: 30px 15px;
+}
+
+.demo-box.thick-border {
+    border-width: 8px;
+}
+
+/* Footer */
+.footer {
+    background: rgba(44, 62, 80, 0.9);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 12px;
+    /* Box model: margin creates space from other elements */
+}
+
+.footer p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .box-examples {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .article {
+        padding: 20px;
+    }
+}
+
+/* Animation for visual appeal */
+.header, .article, .sidebar-item, .box-model-demo {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
